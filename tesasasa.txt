@@ -1,0 +1,9 @@
+sk-engineering@digite.com,devops@digite.com
+
+
+aws lambda invoke \
+            --function-name sk_consolidated_email_notification \
+            --payload '{"release": "SK_10.21", "build": "2726", "newui": "true"}' \
+            --invocation-type RequestResponse \
+            --cli-binary-format raw-in-base64-out \
+            log.txt
